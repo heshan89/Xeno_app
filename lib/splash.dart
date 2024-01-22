@@ -94,7 +94,7 @@ class _SplashScreenState extends State<SplashScreen>
             Expanded(
               flex: 2,
               child: FractionallySizedBox(
-                heightFactor: 0.9,
+                heightFactor: 1,
                 widthFactor: 1.0,
                 child: AnimatedBuilder(
                   animation: _imageOpacityController,
@@ -129,7 +129,7 @@ class _SplashScreenState extends State<SplashScreen>
             Expanded(
               flex: 1,
               child: FractionallySizedBox(
-                heightFactor: 1.1,
+                heightFactor: 1.0,
                 widthFactor: 1.0,
                 child: Container(
                   padding: const EdgeInsets.all(20.0),

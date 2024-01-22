@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xenov1/config/routes.dart';
 import 'package:xenov1/styles.dart';
 import 'package:xenov1/widgets/app_actions.dart';
 import 'package:xenov1/widgets/bottom_nav_bar.dart';
@@ -18,6 +19,21 @@ class _DashboardState extends State<Dashboard> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      // Handle navigation based on the selected index
+      switch (index) {
+        case 0:
+          // Navigate to Dashboard
+          Navigator.pushNamed(context, AppRoutes.dashboard);
+          break;
+        case 1:
+          // Navigate to ApplyLeave
+          Navigator.pushNamed(context, AppRoutes.applyleave);
+          break;
+        case 2:
+          // Navigate to Settings
+          // You can implement this based on your requirements
+          break;
+      }
     });
   }
 
@@ -25,6 +41,7 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text(
           'Dashboard',
           style: apptitile,
@@ -114,7 +131,7 @@ class _DashboardState extends State<Dashboard> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Icon(
-                            Icons.check_box,
+                            Icons.timer,
                             color: Colors.white,
                           ),
                           SizedBox(

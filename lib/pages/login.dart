@@ -57,7 +57,7 @@ class _LoginState extends State<Login> {
               Expanded(
                 flex: 1,
                 child: FractionallySizedBox(
-                  heightFactor: 1.0,
+                  heightFactor: 1.25,
                   widthFactor: 1.0,
                   child: Container(
                     decoration: const BoxDecoration(
